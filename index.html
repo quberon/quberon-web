@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quberon — Evidence-first intervention for robots</title>
+  <meta name="description" content="Quberon builds evidence-first safety and intervention tooling for robotics.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Quberon home">QUBERON</a>
+    <nav aria-label="Primary">
+      <a href="#approach">Approach</a>
+      <a href="#status">Status</a>
+      <a href="https://github.com/quberon/quberon-core">Core repository</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Evidence-first robotics safety</p>
+      <h1>Intervention systems that show their evidence.</h1>
+      <p class="lede">
+        Quberon is building a manufacturer-neutral intervention and evidence layer
+        for robots: a way to request STOP, retain the latch, record what happened,
+        and let reviewers verify the result.
+      </p>
+      <div class="actions">
+        <a class="button" href="https://github.com/quberon/quberon-core">View quberon-core</a>
+        <a class="button secondary" href="#status">See what is proven</a>
+      </div>
+    </section>
+
+    <section id="approach" class="section">
+      <h2>Approach</h2>
+      <div class="grid">
+        <article>
+          <h3>STOP stays available</h3>
+          <p>
+            If optional attestation is unavailable, an authenticated STOP still
+            proceeds and records that limitation instead of pretending certainty.
+          </p>
+        </article>
+        <article>
+          <h3>Permission stays fail-closed</h3>
+          <p>
+            Reset, task execution and other motion-permitting actions require
+            trusted authorization. Rejection and ambiguity do not become motion.
+          </p>
+        </article>
+        <article>
+          <h3>Claims follow evidence</h3>
+          <p>
+            Simulation is labelled simulation. Unimplemented capabilities stay
+            visibly unimplemented. Reviewers get artefacts, not adjectives.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="status" class="section status">
+      <h2>Current status</h2>
+      <ul>
+        <li><strong>Proven in simulation:</strong> STOP priority, latch behaviour, replay and conformance evidence.</li>
+        <li><strong>On hardware:</strong> Raspberry Pi camera and simulated robot control demonstrations.</li>
+        <li><strong>Not claimed:</strong> physical stopping performance, certification, or manufacturer support.</li>
+      </ul>
+      <p>
+        The detailed evidence lives in
+        <a href="https://github.com/quberon/quberon-core">quberon/quberon-core</a>.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Quberon — built in the open, claimed only as far as the evidence goes.</p>
+  </footer>
+</body>
+</html>

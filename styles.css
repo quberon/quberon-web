@@ -1,0 +1,83 @@
+:root {
+  color-scheme: dark;
+  --bg: #0b1020;
+  --panel: #121a30;
+  --text: #eef2ff;
+  --muted: #aab4d0;
+  --accent: #ff3b30;
+  --accent-2: #7dd3fc;
+  --line: #263252;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top left, #17234a 0, var(--bg) 42rem);
+  color: var(--text);
+  font: 16px/1.6 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+a { color: var(--accent-2); }
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.brand {
+  color: var(--text);
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-decoration: none;
+}
+
+nav { display: flex; gap: 20px; flex-wrap: wrap; }
+nav a { color: var(--muted); text-decoration: none; }
+nav a:hover { color: var(--text); }
+
+main, footer {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.hero { padding: 72px 0 48px; max-width: 780px; }
+.eyebrow { color: var(--accent-2); font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; }
+h1 { font-size: clamp(2.4rem, 7vw, 5rem); line-height: 1.02; margin: 0 0 24px; }
+.lede { color: var(--muted); font-size: 1.25rem; }
+
+.actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 32px; }
+.button {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+}
+.button.secondary { background: transparent; border: 1px solid var(--line); color: var(--text); }
+
+.section { border-top: 1px solid var(--line); padding: 48px 0; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+article, .status {
+  background: color-mix(in srgb, var(--panel) 88%, transparent);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+article { padding: 22px; }
+.status { padding: 24px; }
+.status li { margin: 10px 0; }
+
+footer { color: var(--muted); border-top: 1px solid var(--line); }
+
+@media (max-width: 640px) {
+  .site-header { align-items: flex-start; flex-direction: column; }
+  .hero { padding-top: 36px; }
+}
