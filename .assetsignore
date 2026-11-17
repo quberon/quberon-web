@@ -1,0 +1,13 @@
+.git/
+.github/
+.gitignore
+.nojekyll
+README.md
+wrangler.jsonc
+wrangler.toml
+.assetsignore
+.env
+.env.*
+.dev.vars
+.dev.vars.*
+node_modules/
